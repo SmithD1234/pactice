@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+
+<body>
+   
+    <form>
+        <input  id="result" />
+        <input type="button" value="click" onclick="subMit()">
+    </form>
+    <h2 id="evennumber">even number</h2>
+    <h2 id="oddnumber">odd number</h2>
+    <script>
+        function subMit(){
+
+            var input_HTML = document.getElementById("result");
+            var no = input_HTML.value;
+            var i = 1;
+            var evenoutput = "";
+            var oddoutput = "";
+
+            while (i <= no) {
+                if (i % 2 == 0) {
+                    evenoutput += "," + i;
+                
+                }
+                else {
+                    oddoutput += "," + i;
+                }
+                i++;
+            }
+
+            var evennumber_HTML = document.getElementById("evennumber");
+            var oddnumber_HTML = document.getElementById("oddnumber");
+            evennumber_HTML.innerHTML = "even number =" +evenoutput;
+            oddnumber_HTML.innerHTML = "odd number =" +oddoutput;
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
